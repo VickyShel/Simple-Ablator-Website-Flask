@@ -29,7 +29,7 @@ from flask_cors import CORS
 # If `entrypoint` is not defined in app.yaml, App Engine will look for an app
 # called `app` in `main.py`.
 app = Flask(__name__)
-CORS(app, resources={r"/upload": {"origins": "http://localhost:4200"}})
+CORS(app)
 
 @app.route('/upload', methods=['POST'])
 def upload_file():
